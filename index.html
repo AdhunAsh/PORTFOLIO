@@ -9,11 +9,13 @@
     <body>
         <div class="container">
             <div class="left">
-                <img
-                    src="./assets/image/self (1).png"
-                    height="150px"
-                    width="150px"
-                />
+                <div class="img-left">
+                    <img
+                        src="./assets/image/self (1).png"
+                        height="150px"
+                        width="150px"
+                    />
+                </div>
                 <div class="info">
                     <p id="my-name">Adhun E</p>
                     <p id="job">Full Stack Web Developer</p>
@@ -47,14 +49,11 @@
                         ><img src="./assets/image/insta.png"
                     /></a>
                 </div>
-                <div class="contact">
-                    <button id="contact-btn">Get In Touch</button>
-                </div>
             </div>
 
             <div class="right">
                 <div class="about">
-                    <p class="h1">About Me</p>
+                    <p class="h1">About Me >></p>
                     <p id="about-me">
                         Hey, I'm a Computer Science and Engineering student with
                         a passion for Web Development.<br />
@@ -63,7 +62,7 @@
                     </p>
                 </div>
                 <div class="skills">
-                    <p class="h1">Tech Stack</p>
+                    <p class="h1">Skills >></p>
                     <div class="div" style="display: flex">
                         <p class="show">Python</p>
                         <p class="show">JavaScript</p>
@@ -78,7 +77,7 @@
                 </div> -->
 
                 <div class="proj">
-                    <p class="h1">Projects</p>
+                    <p class="h1">Projects >></p>
                     <!-- 1st project -->
                     <div class="experience-item">
                         <div class="emo-xplore" style="display: flex">
@@ -113,6 +112,12 @@
                             <p class="used-stack">Html</p>
                             <p class="used-stack">CSS</p>
                             <p class="used-stack">Figma</p>
+                            <a
+                                target="_blank"
+                                href="https://github.com/AdhunAsh/Emo-Xplore-2.0"
+                                class="git"
+                                ><img src="./assets/image/github.png"
+                            /></a>
                         </div>
                     </div>
                     <!-- 2nd project -->
@@ -142,12 +147,18 @@
                             <p class="used-stack">JavaScript</p>
                             <p class="used-stack">Html</p>
                             <p class="used-stack">CSS</p>
+                            <a
+                                target="_blank"
+                                href="https://github.com/AdhunAsh/Meme-Generator"
+                                class="git"
+                                ><img src="./assets/image/github.png"
+                            /></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="edu">
-                    <p class="h1">Education</p>
+                    <p class="h1">Education >></p>
                     <div class="experience-item">
                         <div class="kmct" style="display: flex">
                             <img src="./assets/image/km.png" />
@@ -178,47 +189,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Modal Structure -->
-            <div id="contactModal" class="modal" style="display: none;">
-                <div class="modal-content">
-                    <h2>Tell me about your Work</h2>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name" />
-
-                    <label for="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Your Email"
-                    />
-
-                    <label for="company">Company</label>
-                    <input
-                        type="text"
-                        id="company"
-                        placeholder="Company Name"
-                    />
-
-                    <label for="details">Project Details</label>
-                    <textarea
-                        id="details"
-                        rows="4"
-                        placeholder="Describe your project"
-                    ></textarea>
-
-                    <div class="buttons">
-                        <button id="close-btn" class="cancel">
-                            Cancel
-                        </button>
-                        <button id="send-btn" class="submit">
-                            Send Message
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
-
-        <script src="script.js"></script>
     </body>
 </html>

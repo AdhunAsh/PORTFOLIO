@@ -27,6 +27,16 @@ body {
     border-radius: 50%;
 }
 
+.img-left {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.img-left:hover {
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
+}
+
 .right {
     width: 65%;
     padding: 20px;
@@ -95,14 +105,20 @@ body {
     padding: 0;
     margin-right: 20px;
     padding: 8px;
+    border-radius: 5px;
+}
+.bt-dn:hover {
+    background-color: rgb(80, 79, 79);
+    transition: 0.3s ease-in-out;
 }
 
 .bt-link {
     background-color: #171513;
     border: none;
-    margin-right: 15px;
+    margin-right: 20px;
     padding: 0;
     margin-top: 7px;
+    height: 28px;
 }
 .bt-link img {
     height: 28px;
@@ -128,20 +144,6 @@ body {
 .bt-insta :hover {
     background-color: rgb(193, 184, 176);
     transition: 0.3s ease-in-out;
-}
-
-.contact {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 40px 0 0 10px;
-}
-
-.contact button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid white ;
-    color: white;
-    background-color: #333;
-    font-size: 13px
 }
 
 
@@ -226,10 +228,22 @@ body {
     margin-bottom: 30px;
 }
 
-
-
-
-
+.git {
+    height: 28px;
+    width: 28;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: none;
+}
+.git img{
+    height: 28px;
+    width: 28px;
+}
+.git:hover {
+    background-color: rgb(255, 123, 0);
+    transition: 0.3s ease-in-out;
+}
 
 .kmct img {
     background-color: white;
@@ -322,88 +336,4 @@ body {
         height: auto;
         overflow-y: visible;
     }
-}
-    
-
-/* Modal Styling */
-/* Modal background overlay */
-.modal {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999; /* Ensuring it's the highest layer */
-}
-
-/* Modal box */
-.modal-content {
-    background-color: #161616;
-    padding: 20px;
-    width: 400px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    position: relative;
-    z-index: 100000; /* Higher than the modal */
-    font-family: "Poppins"; 
-    color: white;
-    margin-bottom: 10px;
-    /* for the box to be centered */
-    position: absolute; /*position relative to viewport */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%); /* Shift it back by 50% of its width & height */
-}
-
-
-/* Input and text areas */
-
-input, textarea {
-    font-size: 14px;  /* Normal font size */
-    padding: 10px;  /* Reduce extra space */
-    width: 100%;  /* Ensure proper width */
-    height: auto;  /* Prevent fixed height */
-    box-sizing: border-box;  /* Fix padding issues */
-    font-weight: normal;  /* Ensure text isn't too bold */
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    background: #333;
-    color: white;
-}
-
-/* Fix button positioning */
-.buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Button styles */
-.cancel {
-    background-color: #444;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-.submit {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Fix overlapping elements */
-* {
-    z-index: auto;
 }
