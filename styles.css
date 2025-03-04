@@ -6,15 +6,21 @@ body {
 
 .container {
     display: flex;
-    padding-left: 100px;
+    flex-direction: row;
+    height: 100vh;
     padding-top: 20px;
 }
 
 .left {
-    flex: 1;
-    min-width: 300px; /* to ensure left side doesnot shrink */
-    padding: 20px;
-
+    width: 35%; /* More space to the left */
+    min-width: 350px;
+    padding-top: 50px;
+    padding-left: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .left img {
@@ -22,17 +28,32 @@ body {
 }
 
 .right {
-    flex: 1;
-    min-width: 300px;
+    width: 65%;
     padding: 20px;
-
+    padding-left: 100px;
+    margin-left: 35%; /* Ensure it doesn't overlap */
+    height: 100vh;
+    overflow-y: auto; /* Make it scrollable */
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+.right::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
 }
+
+.right::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Background color of scrollbar track */
+    border-radius: 10px;
+}
+
+.right::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 10px;
+}
+
+.right::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovered */
+}
+
 
 /* left side */
 
@@ -41,7 +62,7 @@ body {
     margin: 0 0 0 10px;
 }
 
-#name {
+#my-name {
     font-size: 30px;
     font-weight: 700;
     color: white;
@@ -244,4 +265,145 @@ body {
 .clg-duration {
     color: rgb(202, 199, 199);
     font-style: italic;
+}
+
+/* for the lines */
+.experience-item {
+    position: relative;
+    padding-left: 20px; /* Space for the line */
+    border-left: 3px solid #404040; /* Adjust color to match your design */
+    margin-left: 0px;
+}
+
+.experience-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: -3px; /* Align with border-left */
+    bottom: -15px; /* Adjust to create the gap */
+    width: 3px;
+    height: 30px; /* Creates the gap */
+    background-color: #171513; /* Match background color */
+}   
+
+/* Responsive */
+
+/* for lap and pc */
+@media (max-width: 1024px) {
+    .left {
+        width: 30%; /*Reduce left section size  */
+    }
+    .right {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
+/* for tablets */
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column;
+    }
+    .left {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        min-height: 500px; /* Adjust as needed */
+    }   
+    .left .links {
+        justify-content: center;
+    }
+    .right {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        overflow-y: visible;
+    }
+}
+    
+
+/* Modal Styling */
+/* Modal background overlay */
+.modal {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999; /* Ensuring it's the highest layer */
+}
+
+/* Modal box */
+.modal-content {
+    background-color: #161616;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 100000; /* Higher than the modal */
+    font-family: "Poppins"; 
+    color: white;
+    margin-bottom: 10px;
+    /* for the box to be centered */
+    position: absolute; /*position relative to viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); /* Shift it back by 50% of its width & height */
+}
+
+
+/* Input and text areas */
+
+input, textarea {
+    font-size: 14px;  /* Normal font size */
+    padding: 10px;  /* Reduce extra space */
+    width: 100%;  /* Ensure proper width */
+    height: auto;  /* Prevent fixed height */
+    box-sizing: border-box;  /* Fix padding issues */
+    font-weight: normal;  /* Ensure text isn't too bold */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #333;
+    color: white;
+}
+
+/* Fix button positioning */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button styles */
+.cancel {
+    background-color: #444;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.submit {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Fix overlapping elements */
+* {
+    z-index: auto;
 }
