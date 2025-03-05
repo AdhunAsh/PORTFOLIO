@@ -2,6 +2,8 @@
 
 body {
     background-color: #171513;
+    height: 100%;
+    width: 100%;
 }
 
 .container {
@@ -159,6 +161,7 @@ body {
     line-height: 30px;
     font-size: 16px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .skills {
@@ -176,12 +179,11 @@ body {
     margin-bottom: 30px;
 }
 
-.emo-xplore img {
-    height: 130px;
-    width: auto;
+.project{
+    width: 100%;
 }
 
-.meme-generator img {
+.project img {
     height: 130px;
     width: auto;
 }
@@ -330,3 +332,37 @@ body {
         overflow-y: visible;
     }
 }
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        padding-bottom: 0;
+    }
+    /* .left {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        min-height: 500px; 
+        margin-left: 2%;
+    }    */
+    /* .left .links {
+        justify-content: center;
+    } */
+
+    .right {
+        position: relative;
+        width: 125%;
+        margin-left: 0;
+    }
+    
+    .git img{
+        margin-left: -25px;
+    }
+}
+
