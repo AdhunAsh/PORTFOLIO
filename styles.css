@@ -338,10 +338,47 @@ body {
         flex-direction: column;
     }
 
-    .left {
+    .right{
+        position: relative;
+        width: 118%;
+    }
+
+    .project{
+        flex-direction: column;
+    }
+    .project img{
+        margin-top: 30px;
+        width: 500px;
+        height: auto;
+    }
+
+    .proj-name{
+        margin-top: 40px;
+        margin-left: -20px;
+    }
+
+    .proj-des {
+        margin-left: -20px;
+    }
+
+
+}
+
+   /* .left {
         padding-bottom: 0;
     }
-    /* .left {
+    .right {
+        position: relative;
+        width: 125%;
+        margin-left: 0;
+    }
+    
+    .git img{
+        margin-left: -25px;
+    }
+} */
+
+/* .left {
         position: relative;
         width: 100%;
         height: auto;
@@ -354,15 +391,15 @@ body {
     /* .left .links {
         justify-content: center;
     } */
-
-    .right {
-        position: relative;
-        width: 125%;
-        margin-left: 0;
+    
+    .about-project {
+        margin-left: 20px;
+        margin-top: -20px;
     }
     
-    .git img{
-        margin-left: -25px;
+    
+    .proj-des {
+        color: white;
+        font-family: "Poppins";
+    
     }
-}
-
